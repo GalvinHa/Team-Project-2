@@ -16,21 +16,18 @@ something something about the site like a summary
 - FAQ Page
 - About Page  
 
-## Color Palette (Tentative)
-### Option 1
-* Sleek & Techy (Modern, Minimal)
-    - Primary: #1F1F1F (Charcoal Black)
-    - Accent: #00ADB5 (Cyan Blue)
-    - Secondary: #EEEEEE (Light Gray)
-    - Highlight: #FF5722 (Electric Orange)
-    - Text: #FFFFFF (White) or #BDBDBD (Muted Gray)  
-### Option 2
-* Cool & Professional (Trustworthy + Calm)
-    - Primary: #2C3E50 (Midnight Blue)
-    - Accent: #2980B9 (Sky Blue)
-    - Secondary: #ECF0F1 (Light Gray)
-    - Highlight: #27AE60 (Success Green)
-    - Text: #333333 (Dark Gray)
+## Typography:
+- Headings: Poppins, sans-serif 
+- Body: Roboto, sans-serif
+
+## Color Palette:
+- Texts:rgb(39, 39, 39);
+- Background Color: #F1F5F9;
+- Errors: #EF4444;
+- Green: #10B981;
+- Yellow: #FACC15;
+- Accent: #9CA3AF
+
 ## Screenshots
 * put final look of the site here * 
 ## To Do (Update Regularly):
