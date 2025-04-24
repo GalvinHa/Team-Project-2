@@ -3,11 +3,11 @@
 something something about the site like a summary
 
 ## Pages:
-- Navbar and footer (used throughout the site) **(Jerome)**
-- Home Page **(Jerome)**
-- Product Listing **(Jerome)**
-- Product Details(? the actual page of the products) **(Jerome)**
-- Shopping Cart Page **(Jerome)** 
+- Navbar and footer (used throughout the site) 
+- Home Page 
+- Product Listing
+- Product Details(? the actual page of the products)
+- Shopping Cart Page 
 - Checkout Page
 - Order Confirmation
 - User Account Login/Sign-Up
