@@ -13,16 +13,55 @@
     font-family: "Roboto", sans-serif;
 }
 
-body{
-    background-color: gray;
+:root{
+    --background-color: #F1F5F9;
+    --error: #EF4444;
+    --green: #10B981;
+    --warning: #FACC15;
+    --accent-color: #9CA3AF;
+    --text-color: rgb(39, 39, 39);
 }
+
+body{
+    background-color: var(--background-color);
+}
+
+/* Mobile-Navbar */
 
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
-    padding: 1rem;
+    background-color: var(--background-color);
+    padding: .5rem;
+    box-shadow: 0px 10.83px 10.83px rgba(0, 0, 0, 0.25);
+}
+
+nav>ul{
+    display: flex;
+    justify-content: center;
+
+}
+
+ul > *{
+    margin-right: 1rem;
+    caret-color: transparent;
+}
+
+ul>a{
+    margin-right: 2rem;
+}
+
+ul>a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-logo{
+    width: 100%;
+    height: 4rem;
+    caret-color: transparent;
 }
 
 .menu-btn{
@@ -32,12 +71,13 @@ nav{
     width: 100%;
     cursor: pointer;
     transition: 0.5s ease-in-out;
+    caret-color: transparent;
 }
 
 .hamburger{
-    width: 3.5rem;
-    height: 7px;
-    background: white;
+    width: 2.5rem;
+    height: 6px;
+    background: black;
     transition: 0.25s ease-in-out;
     border-radius: 10px;
     cursor: pointer;
@@ -47,20 +87,21 @@ nav{
 .hamburger::after{
     content: '';
     position: absolute;
-    width: 3.5rem;
-    height: 7px;
-    background: white;
+    width: 2.5rem;
+    height: 6px;
+    background: black;
     transition: 0.25s ease-in-out;
     border-radius: 10px;
 }
 
 .hamburger::before{
-    transform: translateY(-15px);
+    transform: translateY(-.8rem);
 }
 
 .hamburger::after{
-    transform: translateY(15px);
+    transform: translateY(.8rem);
 }
+
 
 .open .hamburger{
     background-color: transparent;
@@ -74,3 +115,6 @@ nav{
     transform: rotate(45deg);
 }
 
+.hero-banner{
+    width: 100%;
+}
