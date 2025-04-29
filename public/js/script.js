@@ -11,3 +11,204 @@ menuButton.addEventListener("click", () => {
         menuButton.classList.remove('open')
     }
 })
+
+
+
+// Shared utility functions
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function showError(input, message) {
+    // Remove any existing error message
+    const existingError = input.parentElement.querySelector('.error-message');
+    if (existingError) {
+        existingError.remove();
+    }
+    
+    // Create error message element
+    const errorElement = document.createElement('div');
+    errorElement.className = 'error-message';
+    errorElement.style.color = 'var(--error)';
+    errorElement.style.fontSize = '0.8rem';
+    errorElement.style.marginTop = '0.25rem';
+    errorElement.textContent = message;
+    
+    // Insert error message after the input
+    input.parentElement.appendChild(errorElement);
+    
+    // Highlight the input field
+    input.style.borderColor = 'var(--error)';
+}
+
+function clearError(input) {
+    const existingError = input.parentElement.querySelector('.error-message');
+    if (existingError) {
+        existingError.remove();
+    }
+    input.style.borderColor = 'var(--accent-color)';
+}
+
+function checkLoginStatus() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    if (isLoggedIn) {
+        // If already logged in, redirect to home page
+        window.location.href = 'index.html';
+    }
+}
+
+// Login page functionality
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if we're on the login page
+    const loginForm = document.getElementById('login-form');
+    if (loginForm) {
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+
+        // Form submission handler
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Clear previous error messages
+            clearError(emailInput);
+            clearError(passwordInput);
+            
+            // Email validation
+            if (!emailInput.value.trim()) {
+                showError(emailInput, 'Email is required');
+                isValid = false;
+            } else if (!isValidEmail(emailInput.value.trim())) {
+                showError(emailInput, 'Please enter a valid email address');
+                isValid = false;
+            }
+            
+            // Password validation
+            if (!passwordInput.value) {
+                showError(passwordInput, 'Password is required');
+                isValid = false;
+            } else if (passwordInput.value.length < 6) {
+                showError(passwordInput, 'Password must be at least 6 characters');
+                isValid = false;
+            }
+            
+            // If form is valid, proceed with login
+            if (isValid) {
+                // Store login status in localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userEmail', emailInput.value.trim());
+                
+                // Redirect to home page after successful login
+                window.location.href = 'index.html';
+            }
+        });
+
+        // Handle signup button
+        const signupButton = document.getElementById('signup-redirect');
+        if (signupButton) {
+            signupButton.addEventListener('click', () => {
+                window.location.href = 'signup.html';
+            });
+        }
+
+        // Handle "Forgot password" link
+        const forgotPasswordLink = document.querySelector('.forgot-password a');
+        if (forgotPasswordLink) {
+            forgotPasswordLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Password reset functionality would go here');
+            });
+        }
+        
+        // Check login status when page loads
+        checkLoginStatus();
+    }
+
+    // Signup page functionality
+    const signupForm = document.getElementById('signup-form');
+    if (signupForm) {
+        const fullnameInput = document.getElementById('fullname');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+        const termsCheckbox = document.getElementById('terms');
+
+   
+        document.head.appendChild(style);
+
+        // Form submission handler
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Clear previous error messages
+            clearError(fullnameInput);
+            clearError(emailInput);
+            clearError(passwordInput);
+            clearError(confirmPasswordInput);
+            
+            // Full name validation
+            if (!fullnameInput.value.trim()) {
+                showError(fullnameInput, 'Full name is required');
+                isValid = false;
+            }
+            
+            // Email validation
+            if (!emailInput.value.trim()) {
+                showError(emailInput, 'Email is required');
+                isValid = false;
+            } else if (!isValidEmail(emailInput.value.trim())) {
+                showError(emailInput, 'Please enter a valid email address');
+                isValid = false;
+            }
+            
+            // Password validation
+            if (!passwordInput.value) {
+                showError(passwordInput, 'Password is required');
+                isValid = false;
+            } else if (passwordInput.value.length < 6) {
+                showError(passwordInput, 'Password must be at least 6 characters');
+                isValid = false;
+            }
+            
+            // Confirm password validation
+            if (passwordInput.value !== confirmPasswordInput.value) {
+                showError(confirmPasswordInput, 'Passwords do not match');
+                isValid = false;
+            }
+            
+            // Terms checkbox validation
+            if (!termsCheckbox.checked) {
+                showError(termsCheckbox, 'You must agree to the Terms of Service');
+                isValid = false;
+            }
+            
+            // If form is valid, proceed with signup
+            if (isValid) {
+                // Store user data in localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userEmail', emailInput.value.trim());
+                localStorage.setItem('userName', fullnameInput.value.trim());
+                
+                // Redirect to home page after successful signup
+                window.location.href = 'index.html';
+            }
+        });
+
+        // Handle login redirect button
+        const loginRedirectButton = document.getElementById('login-redirect');
+        if (loginRedirectButton) {
+            loginRedirectButton.addEventListener('click', () => {
+                window.location.href = 'login.html';
+            });
+        }
+        
+        // Check login status when page loads
+        checkLoginStatus();
+    }
+
+
+});
