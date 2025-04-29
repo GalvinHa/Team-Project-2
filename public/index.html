@@ -1,34 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GearNexus</title>
-    <link rel="icon" type="image/x-icon" href="assets/logos/site-logo.svg">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GearNexus</title>
+  <link rel="icon" type="image/x-icon" href="assets/logos/site-logo.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo-container">
-                <a href="index.html" class="logo"><img class="site-logo" src="assets/logos/site-logo.svg" alt="GearNexus logo"></a>
-            </div>
-            <ul>
-                <a href="#">
-                    <img src="assets/logos/mobile-account-icon.svg" alt="User Account Icon">
-                </a>
-                <a href="#">
-                    <img src="assets/logos/mobile-favorite-icon.svg" alt="User Favorite Icon">
-                </a>
-                <div class="menu-btn">
-                    <div class="hamburger"></div>
-                </div>
-            </ul>
-        </nav>
-        <div class="hero-banner-container">
-            <img class="hero-banner" src="assets/images/manuel-rb-keyboard.jpg" alt="Keyboard Hero Image">
+
+  <header>
+    <nav>
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <img class="site-logo" src="assets/logos/site-logo.svg" alt="GearNexus logo" />
+        </a>
+      </div>
+      <ul>
+        <li class="search">
+          <div class="search-container">
+            <input type="text" placeholder="Search…" />
+            <button type="button">
+              <img src="assets/logos/navbar-search-icon.svg" alt="Search" />
+            </button>
+          </div>
+        </li>
+        <li><a href="#"><img src="assets/logos/navbar-account-icon.svg" alt="Account" /></a></li>
+        <li><a href="#"><img src="assets/logos/navbar-favorite-icon.svg" alt="Favorites" /></a></li>
+        <li><a href="#"><img src="assets/logos/navbar-bag-icon.svg" alt="Bag/Cart" /></a></li>
+        <li class="menu-btn">
+          <div class="hamburger"></div>
+        </li>
+      </ul>
+    </nav>
+    <div class="hero-banner-container">
+      <img class="hero-banner" src="assets/images/manuel-rb-keyboard.jpg" alt="Keyboard Hero Image" />
+    </div>
+  </header>
+
+  <main>
+    <section class="products-section">
+      <h2 class="section-title">Featured Products</h2>
+      <div class="products-grid">
+        <!-- repeat this .product-card for each product; add product pictures -->
+        <div class="product-card">
+          <img src="assets/images/product1.jpg" alt="Product 1" />
         </div>
-    </header>
-    <script src="js/script.js"></script>
+        <div class="product-card">
+          <img src="assets/images/product2.jpg" alt="Product 2" />
+        </div>
+        <div class="product-card">
+          <img src="assets/images/product3.jpg" alt="Product 3" />
+        </div>
+        <div class="product-card">
+          <img src="assets/images/product4.jpg" alt="Product 4" />
+        </div>
+        <div class="product-card">
+          <img src="assets/images/product5.jpg" alt="Product 5" />
+        </div>
+        <div class="product-card">
+          <img src="assets/images/product6.jpg" alt="Product 6" />
+        </div>
+      </div>
+      <div class="show-all">
+        <a href="shop.html">Show All Products</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-widgets">
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="assets/logos/footer-x-logo.svg" alt="Twitter" /></a>
+          <a href="#"><img src="assets/logos/footer-instagram-logo.svg" alt="Instagram" /></a>
+          <a href="#"><img src="assets/logos/footer-github-logo.svg" alt="GitHub" /></a>
+          <a href="#"><img src="assets/logos/footer-linkedin-logo.svg" alt="LinkedIn" /></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="shop.html">Shop All</a></li>
+          <li><a href="index.html">Front Page</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="shipping.html">Shipping Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-column newsletter">
+        <h3>Join our Email Listing!</h3>
+        <p>To learn about new product sales</p>
+        <form action="#" method="post">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">→</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025, SFSU All rights reserved. Jerome, Galvin, Sparsh | Group 2</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
+
 </html>
