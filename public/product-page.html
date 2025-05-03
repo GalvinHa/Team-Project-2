@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GearNexus | Product Page</title>
+  <link rel="icon" type="image/x-icon" href="assets/logos/site-logo.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <img class="site-logo" src="assets/logos/site-logo.svg" alt="GearNexus logo" />
+        </a>
+      </div>
+      <ul>
+        <li><a class="profile-btn" href="login.html"><img src="assets/logos/navbar-account-icon.svg" alt="Account" /></a></li>
+        <li><a class="favorite-btn" href="#"><img src="assets/logos/navbar-favorite-icon.svg" alt="Favorites" /></a></li>
+        <li><a class="bag-btn" href="#"><img src="assets/logos/navbar-bag-icon.svg" alt="Bag/Cart" /></a></li>
+        <li class="search">
+          <div class="search-container-desktop">
+            <input type="text" placeholder="Search…" />
+            <button type="button">
+              <img src="assets/logos/navbar-search-icon.svg" alt="Search" />
+            </button>
+          </div>
+        </li>
+        <li class="menu-btn">
+          <div class="hamburger"></div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="product-page-content">
+    <img id="mainImage" class="main-image" src="https://images.unsplash.com/photo-1605773527852-c546a8584ea3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product">
+    <div class="carousel-wrapper">
+      <div class="arrow" onclick="prevImage()">❮</div>
+      <div class="thumbnails" id="thumbContainer"></div>
+      <div class="arrow" onclick="nextImage()">❯</div>
+    </div>
+    <h2 class="product-title">${Product Title}</h2>
+    <div class="product-selection-section">
+      <label for="product-select">Choose your options:</label>
+      <select name="product-choice" id="product-select">
+        <option value="">--Please choose an option--</option>
+        <option value="lightweight">Lightweight</option>
+        <option value="wireless">Wireless</option>
+        <option value="high-dpi">High DPI</option>
+        <option value="rgb">RGB Lighting</option>
+        <option value="extra-buttons">Extra Side Buttons</option>
+      </select>
+    </div>
+    <div class="product-feature-section">
+      <h3 class="product-about-heading">Features:</h3>
+      <ul>
+        <li>${Product Features}</li>
+        <li>${Product Features}</li>
+        <li>${Product Features}</li>
+      </ul>
+    </div>
+    <div class="shipping-info-section">
+      <h3 class="product-about-heading">Shipping Info:</h3>
+      <p>Orders are processed within 1–2 business days. Standard shipping takes 3–7 business days. Expedited options available at checkout. Tracking provided once shipped.</p>
+    </div>
+    <button class="add-to-cart-btn">
+      Add To Cart
+    </button>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-widgets">
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="assets/logos/footer-x-logo.svg" alt="Twitter" /></a>
+          <a href="#"><img src="assets/logos/footer-instagram-logo.svg" alt="Instagram" /></a>
+          <a href="#"><img src="assets/logos/footer-github-logo.svg" alt="GitHub" /></a>
+          <a href="#"><img src="assets/logos/footer-linkedin-logo.svg" alt="LinkedIn" /></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="shop.html">Shop All</a></li>
+          <li><a href="index.html">Front Page</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="shipping.html">Shipping Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-column newsletter">
+        <h3>Join our Email Listing!</h3>
+        <p>To learn about new product sales</p>
+        <form action="#" method="post">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">→</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025, SFSU All rights reserved. Jerome, Galvin, Sparsh | Group 2</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -212,3 +212,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+//product carousel functionality
+
+const imageUrls = [
+    "https://images.unsplash.com/photo-1605773527852-c546a8584ea3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/flagged/photo-1561023367-4431103a484f?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1698671497722-fd2dd2b2316d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29tcHV0ZXIlMjBtb3VzZXxlbnwwfDB8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1527814050087-3793815479db?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ];
+
+    let currentIndex = 0;
+    const mainImage = document.getElementById("mainImage");
+    const thumbContainer = document.getElementById("thumbContainer");
+
+    function renderThumbnails() {
+        thumbContainer.innerHTML = '';
+        imageUrls.forEach((url, index) => {
+    const thumb = document.createElement("img");
+    thumb.src = url;
+    thumb.style.width = "60px";
+    thumb.style.height = "45px";
+if (index === currentIndex) {
+  thumb.classList.add("active");
+
+  // Scroll active thumbnail into view
+  setTimeout(() => {
+    thumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  }, 0);
+}
+
+thumb.onclick = () => {
+  currentIndex = index;
+  updateCarousel();
+  resetAutoScroll(); 
+};
+
+thumbContainer.appendChild(thumb);
+});
+}
+
+    function updateCarousel() {
+    mainImage.src = imageUrls[currentIndex];
+    renderThumbnails();
+    }
+
+    function prevImage() {
+    currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
+    updateCarousel();
+    }
+
+    function nextImage() {
+    currentIndex = (currentIndex + 1) % imageUrls.length;
+    updateCarousel();
+    }
+
+    updateCarousel();
