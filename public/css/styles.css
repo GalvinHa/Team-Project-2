@@ -576,12 +576,12 @@ product-page styles below
 **/
 
 .main-image {
-  width: 70%;
+  width: 100%;
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .carousel-wrapper {
@@ -634,13 +634,12 @@ product-page styles below
   margin-top: 2rem;
 }
 
-.product-selection-section,.product-feature-section,.shipping-info-section{
-  margin: 2rem;
-}
-
-.product-selection-section{
-  display:flex;
-  flex-direction: column;
+.product-selection-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  align-items: center;
 }
 
 .product-selection-section *{
@@ -656,7 +655,8 @@ product-page styles below
   padding: 1rem;
   border-radius: 10px;
   background-color: var(--warning);
-  width: 80%;
+  width: 100%;
+  margin: 1rem 0;
 }
 
 @media (min-width: 768px) {
@@ -715,12 +715,108 @@ product-page styles below
   }
   .product-details .product-selection-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 0.5rem;
+    flex-wrap: nowrap;
   }
   .product-details .add-to-cart-btn {
-    width: auto;
-    align-self: start;
-    padding: 1rem 2rem;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+}
+
+/* —— PRODUCT DETAILS TIGHTENING & BUTTON STYLING —— */
+
+/* always left-align details */
+.product-details {
+  text-align: left;
+}
+
+/* grey background for title */
+.product-title {
+  background-color: #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* price spacing */
+.product-price {
+  margin: 0.25rem 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* layout of option buttons */
+.product-selection-section {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+/* pill-style option buttons */
+.option-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #666;
+  border-radius: 999px;
+  background-color: #f5f5f5;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.option-btn:hover {
+  background-color: #e0e0e0;
+  border-color: #333;
+}
+
+/* tighten feature & shipping lists */
+.product-feature-section,
+.shipping-info-section {
+  margin-bottom: 1rem;
+}
+.product-feature-section ul,
+.shipping-info-section p {
+  margin-left: 1rem;
+}
+.product-feature-section ul li {
+  list-style: disc;
+  margin-left: 1rem;
+}
+
+/* ——— OPTION-SWITCHER: dropdown on mobile, pills on desktop ——— */
+
+.option-dropdown {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  background: #ddd;
+  border-radius: 999px;
+  margin: 1rem 0;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  cursor: pointer;
+}
+
+.option-pills {
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* desktop: hide dropdown, show pills */
+@media (min-width: 768px) {
+  .option-dropdown {
+    display: none;
+  }
+  .option-pills {
+    display: flex;
   }
 }

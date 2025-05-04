@@ -52,15 +52,24 @@
     <h2 class="product-title">${Product Title}</h2>
     <p class="product-price">$20.00 USD</p>
     <div class="product-selection-section">
-      <label for="product-select">Choose your options:</label>
-      <select name="product-choice" id="product-select">
-        <option value="">--Please choose an option--</option>
+      <!-- MOBILE: native dropdown -->
+      <select class="option-dropdown">
+        <option value="">Pick an option</option>
         <option value="lightweight">Lightweight</option>
         <option value="wireless">Wireless</option>
         <option value="high-dpi">High DPI</option>
         <option value="rgb">RGB Lighting</option>
         <option value="extra-buttons">Extra Side Buttons</option>
       </select>
+    
+      <!-- DESKTOP: pill buttons -->
+      <div class="option-pills">
+        <button type="button" class="option-btn">Lightweight</button>
+        <button type="button" class="option-btn">Wireless</button>
+        <button type="button" class="option-btn">High DPI</button>
+        <button type="button" class="option-btn">RGB Lighting</button>
+        <button type="button" class="option-btn">Extra Side Buttons</button>
+      </div>
     </div>
     <button class="add-to-cart-btn">Add To Cart</button>
     <div class="product-feature-section">
