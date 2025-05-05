@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title} - GearNexus
+    link(rel="icon", type="image/x-icon", href="assets/logos/site-logo.svg")
+    link(rel="stylesheet", href="css/styles.css")
+    block head
+  
+  body
+    header
+      nav
+        .logo-container
+          a.logo(href="index.html")
+            img.site-logo(src="assets/logos/site-logo.svg", alt="GearNexus logo")
+        ul
+          li
+            a.profile-btn(href="login.html")
+              img(src="assets/logos/navbar-account-icon.svg", alt="Account")
+          li
+            a.favorite-btn(href="#")
+              img(src="assets/logos/navbar-favorite-icon.svg", alt="Favorites")
+          li
+            a.bag-btn(href="#")
+              img(src="assets/logos/navbar-bag-icon.svg", alt="Bag/Cart")
+          li.search
+            .search-container-desktop
+              input(type="text", placeholder="Search…")
+              button(type="button")
+                img(src="assets/logos/navbar-search-icon.svg", alt="Search")
+          li.menu-btn
+            .hamburger
+      
+      block hero
+    
+    main
+      block content
+    
+    footer.site-footer
+      .footer-widgets
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              img(src="assets/logos/footer-x-logo.svg", alt="Twitter")
+            a(href="#")
+              img(src="assets/logos/footer-instagram-logo.svg", alt="Instagram")
+            a(href="#")
+              img(src="assets/logos/footer-github-logo.svg", alt="GitHub")
+            a(href="#")
+              img(src="assets/logos/footer-linkedin-logo.svg", alt="LinkedIn")
+        .footer-column
+          h3 Quick Links
+          ul
+            li
+              a(href="shop.html") Shop All
+            li
+              a(href="index.html") Front Page
+            li
+              a(href="contact.html") Contact
+        .footer-column
+          h3 Support
+          ul
+            li
+              a(href="faq.html") FAQ
+            li
+              a(href="terms.html") Terms of Service
+            li
+              a(href="shipping.html") Shipping Policy
+        .footer-column.newsletter
+          h3 Join our Email Listing!
+          p To learn about new product sales
+          form(action="#", method="post")
+            input(type="email", placeholder="Enter your email", required)
+            button(type="submit") →
+      .footer-bottom
+        p © 2025, SFSU All rights reserved. Jerome, Galvin, Sparsh | Group 2
+    
+    block scripts
