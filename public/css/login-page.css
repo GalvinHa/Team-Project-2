@@ -1,0 +1,203 @@
+:root {
+    --background-color: #F1F5F9;
+    --error: #EF4444;
+    --green: #10B981;
+    --warning: #FACC15;
+    --accent-color: #9CA3AF;
+    --text-color: rgb(39, 39, 39);
+    --link-highlight: rgba(255, 103, 14, 0.993);
+}
+
+/**
+    Heading: 
+    font-family: "Poppins", sans-serif;
+    
+    Body: 
+    font-family: "Roboto", sans-serif;
+*/
+
+
+/*Checkbox signup forum */
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-bottom: .5em;
+}
+
+.checkbox-container input {
+    width: auto;
+    margin-right: 10rem;
+}
+
+.checkbox-container a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+    color: var(--error);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+/* Form input focus state */
+.form-group input:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+/* Checkbox container styling */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.checkbox-container input {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.checkbox-container a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+
+/* Success and error states for form submission */
+.form-group.success input {
+    border-color: var(--green);
+}
+
+.form-group.error input {
+    border-color: var(--error);
+}
+
+/* Animation for form submission */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.login-container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 1.5rem;
+        margin: 8rem auto 2rem;
+        width: 90%;
+    }
+}
+
+/* login/signup container */
+
+
+.login-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 31.25rem;
+    margin: 20rem auto;
+    font-family: "Roboto", sans-serif;
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.forgot-password {
+    text-align: right;
+    margin: 0.5rem 0;
+}
+
+.forgot-password a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #059669;
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+.signup-prompt {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.signup-prompt p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
