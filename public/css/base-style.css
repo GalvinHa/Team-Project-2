@@ -32,8 +32,6 @@ body {
 }
 
 
-
-
 /* Navbar */
 nav {
     display: flex;
@@ -49,46 +47,61 @@ nav {
 }
 
 
+nav a {
+    text-decoration: none;
+}
 
 nav>ul {
     display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 nav>ul>li {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-right: 1.5rem;
+    margin-right: .2rem;
 }
 
-nav>ul>li>a>img {
-    width: 2.5rem;
+/* For the icon and icon label at the bottom so that the span is below the icons*/
+nav>ul>li * {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icons */
+nav>ul img {
+    width: 100%;
     height: 2.5rem;
     object-fit: contain;
 }
 
+
+/* I don't like the caret when a part of a website is being clicked where it shouldn't beq*/
 ul>* {
-    margin-right: 1rem;
     caret-color: transparent;
 }
 
-ul>a {
-    margin-right: 2rem;
-}
-
-ul>a {
+.search-icon-btn {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-.profile-btn, .favorite-btn{
+.search-icon-btn img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.profile-btn, .favorite-btn, .cart-btn, .shop-btn, .search-icon-btn {
     display: none;
-  }
-  
+}
+
 
 .site-logo {
     width: 100%;
@@ -96,49 +109,45 @@ ul>a {
     caret-color: transparent;
 }
 
-/* Search */
-.search-container-desktop {
-    display: flex;
-    align-items: center;
-    background: #DADADA;
-    border-radius: 2rem;
-    padding: 0.0rem 0.750rem;
-    display: none;
-}
-
-.search-container-desktop input {
-    border: none;
-    outline: none;
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    height: 1rem;
-    width: 10rem;
-    background: #DADADA;
-}
-
-.search-container-desktop button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin-left: 0.5rem;
-    cursor: pointer;
-}
-
-.search-container-desktop button img {
-    width: 2.3rem;
-    height: 2.3rem;
-    margin-right: 5px;
-}
 
 .menu-btn {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
     transition: 0.5s ease-in-out;
     caret-color: transparent;
+    margin-right: 1rem;
+    z-index: 1001;
 }
+
+
+
+/* Base hidden position off-screen to the right */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    /* Or 100% if you want full width */
+    background-color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Show menu */
+.nav-menu.active {
+    transform: translateX(0);
+}
+
+
 
 .hamburger {
     width: 2.5rem;
@@ -181,54 +190,6 @@ ul>a {
     transform: rotate(45deg);
 }
 
-@media (max-width: 768px) {
-    .hamburger {
-        width: 2.5rem;
-        height: 6px;
-        background: black;
-        transition: 0.25s ease-in-out;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-
-    .hamburger::before,
-    .hamburger::after {
-        content: '';
-        position: absolute;
-        width: 2.5rem;
-        height: 6px;
-        background: black;
-        transition: 0.25s ease-in-out;
-        border-radius: 10px;
-    }
-
-    .hamburger::before {
-        transform: translateY(-.8rem);
-    }
-
-    .hamburger::after {
-        transform: translateY(.8rem);
-    }
-
-
-    .open .hamburger {
-        background-color: transparent;
-    }
-
-    .open .hamburger::before {
-        transform: rotate(-45deg);
-    }
-
-    .open .hamburger::after {
-        transform: rotate(45deg);
-    }
-
-    .hero-banner-container {
-        height: 70vh;
-        overflow: hidden;
-        margin-top: 7rem;
-    }
-}
 
 /* FOOTER */
 .site-footer {
@@ -315,9 +276,110 @@ ul>a {
     margin: 0;
 }
 
+@media (max-width: 768px) {
+    .hamburger {
+        width: 2.5rem;
+        height: 6px;
+        background: black;
+        transition: 0.25s ease-in-out;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        width: 2.5rem;
+        height: 6px;
+        background: black;
+        transition: 0.25s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .hamburger::before {
+        transform: translateY(-.8rem);
+    }
+
+    .hamburger::after {
+        transform: translateY(.8rem);
+    }
+
+
+    .open .hamburger {
+        background-color: transparent;
+    }
+
+    .open .hamburger::before {
+        transform: rotate(-45deg);
+    }
+
+    .open .hamburger::after {
+        transform: rotate(45deg);
+    }
+
+    .hero-banner-container {
+        height: 70vh;
+        overflow: hidden;
+        margin-top: 7rem;
+    }
+}
+
 @media (min-width: 768px) {
-    .profile-btn, .favorite-btn {
+
+    .nav-menu {
+        position: static;
+        transform: none;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+        transition: none;
+    }
+
+    .nav-menu.active {
+        transform: none;
+    }
+
+    /* The label for the icons*/
+    .navbar-item-label {
+        font-size: .9rem;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+
+    /* The spacing of the icons */
+    nav>ul>*, li>* {
+        margin-right: 2rem;
+    }
+
+    .search-icon-btn {
+        flex-direction: column;
+    }
+
+    .search-icon-btn img {
+        height: 2.5rem;
+    }
+
+    .search-icon-btn span {
         display: block;
+    }
+
+    /*Nav icons label*/
+    nav>ul>li * {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-btn, .favorite-btn, .cart-btn, .shop-btn, .search-icon-btn {
+        display: flex;
     }
 
     .menu-btn {

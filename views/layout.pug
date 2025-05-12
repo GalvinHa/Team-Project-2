@@ -5,7 +5,6 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title #{title} - GearNexus
     link(rel="icon", type="image/x-icon", href="assets/logos/site-logo.svg")
-    //- link(rel="stylesheet", href="css/styles.css")
     link(rel="stylesheet", href="css/base-style.css")
     block head
   
@@ -15,24 +14,31 @@ html(lang="en")
         .logo-container
           a.logo(href="index.html")
             img.site-logo(src="assets/logos/site-logo.svg", alt="GearNexus logo")
-        ul
+        .menu-btn
+          .hamburger
+        ul.nav-menu
+          li 
+            button.search-icon-btn(type="button")
+              img(src="assets/logos/navbar-search-icon.svg", alt="Search")
+              span.navbar-item-label Search
           li
-            a.profile-btn(href="login.html")
-              img(src="assets/logos/navbar-account-icon.svg", alt="Account")
+            a.shop-btn(href="shop.html")
+              img(src="assets/logos/navbar-shop-icon.svg", alt="Shop")
+              span.navbar-item-label Shop
           li
             a.favorite-btn(href="#")
               img(src="assets/logos/navbar-favorite-icon.svg", alt="Favorites")
+              span.navbar-item-label Favorites
           li
-            a.bag-btn(href="#")
-              img(src="assets/logos/navbar-bag-icon.svg", alt="Bag/Cart")
-          li.search
-            .search-container-desktop
-              input(type="text", placeholder="Search…")
-              button(type="button")
-                img(src="assets/logos/navbar-search-icon.svg", alt="Search")
-          li.menu-btn
-            .hamburger
-      
+            a.cart-btn(href="#")
+              img(src="assets/logos/navbar-cart-icon.svg", alt="Bag/Cart")
+              span.navbar-item-label Cart
+          li
+            a.profile-btn(href="login.html")
+              img(src="assets/logos/navbar-account-icon.svg", alt="Account")
+              span.navbar-item-label Account
+        //- .menu-btn
+        //-   .hamburger
       block hero
     
     main
@@ -77,5 +83,6 @@ html(lang="en")
             button(type="submit") →
       .footer-bottom
         p © 2025, SFSU All rights reserved. Jerome, Galvin, Sparsh | Group 2
-    
+
+    script(src="js/base.js")
     block scripts
