@@ -49,6 +49,7 @@ nav {
 
 nav a {
     text-decoration: none;
+    color: var(--text-color);
 }
 
 nav>ul {
@@ -59,15 +60,16 @@ nav>ul>li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: .2rem;
+    margin-top: 4rem;
 }
 
-/* For the icon and icon label at the bottom so that the span is below the icons*/
+/* For the icon and icon label at the bottom so that the span is on the right the icons*/
 nav>ul>li * {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 /* Icons */
@@ -83,6 +85,38 @@ ul>* {
     caret-color: transparent;
 }
 
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.site-logo {
+    width: 100%;
+    height: 4rem;
+    caret-color: transparent;
+}
+
+
+.site-name-span {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.site-letter-n{
+    color: rgb(221, 144, 0);
+}
+
+
+/* The label for the icons*/
+.navbar-item-label {
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
 .search-icon-btn {
     display: flex;
     align-items: center;
@@ -95,18 +129,6 @@ ul>* {
 .search-icon-btn img {
     width: 100%;
     object-fit: contain;
-}
-
-
-.profile-btn, .favorite-btn, .cart-btn, .shop-btn, .search-icon-btn {
-    display: none;
-}
-
-
-.site-logo {
-    width: 100%;
-    height: 4rem;
-    caret-color: transparent;
 }
 
 
@@ -134,7 +156,7 @@ ul>* {
     background-color: white;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     padding: 2rem 1rem;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
@@ -327,6 +349,22 @@ ul>* {
 
 @media (min-width: 768px) {
 
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .site-name-span {
+        font-size: 3.5rem;
+        margin-left: 1.5rem;
+    }
+
+    /* The label for the icons*/
+    .navbar-item-label {
+        font-size: .9rem;
+    }
+
     .nav-menu {
         position: static;
         transform: none;
@@ -345,16 +383,9 @@ ul>* {
         transform: none;
     }
 
-    /* The label for the icons*/
-    .navbar-item-label {
-        font-size: .9rem;
-        text-decoration: none;
-        color: var(--text-color);
-    }
-
 
     /* The spacing of the icons */
-    nav>ul>*, li>* {
+    nav>ul>* {
         margin-right: 2rem;
     }
 
@@ -366,8 +397,8 @@ ul>* {
         height: 2.5rem;
     }
 
-    .search-icon-btn span {
-        display: block;
+    nav>ul>li{
+        margin-top: 0;
     }
 
     /*Nav icons label*/
@@ -376,6 +407,7 @@ ul>* {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 0;
     }
 
     .profile-btn, .favorite-btn, .cart-btn, .shop-btn, .search-icon-btn {
