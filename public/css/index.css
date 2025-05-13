@@ -1,0 +1,91 @@
+:root {
+    --background-color: #F1F5F9;
+    --error: #EF4444;
+    --green: #10B981;
+    --warning: #FACC15;
+    --accent-color: #9CA3AF;
+    --text-color: rgb(39, 39, 39);
+    --link-highlight: rgba(255, 103, 14, 0.993);
+}
+
+
+.hero-banner {
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+/* Section titles */
+.section-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
+
+/* Product Grid */
+.products-section {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* "Show All" link */
+.show-all {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.show-all a {
+    font-family: "Poppins", sans-serif;
+    color: var(--accent-color);
+    text-decoration: underline;
+    font-weight: 800;
+    transition: 0.25s ease-in-out;
+}
+
+.show-all>a:hover {
+    color: var(--link-highlight);
+}
+
+
+
+/* RESPONSIVE: 2 columns on tablets/small screens */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+/* RESPONSIVE: 1 column on very small */
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,37 @@
+extends layout
+
+block head
+  title Sign Up - GearNexus
+  link(rel="stylesheet", href="css/login-page.css")
+
+block content
+  .login-container
+    h1 Create Account
+    if error
+      .error-message
+        p= error
+    form#signup-form(action="/signup" method="post")
+      .form-group
+        label(for="fullname") Full Name
+        input#fullname(type="text", name="fullname", placeholder="Enter your full name", required, value=fullname)
+      .form-group
+        label(for="email") Email
+        input#email(type="email", name="email", placeholder="Enter your email", required, value=email)
+      .form-group
+        label(for="password") Password
+        input#password(type="password", name="password", placeholder="Create a password", required)
+      .form-group
+        label(for="confirmPassword") Confirm Password
+        input#confirmPassword(type="password", name="confirmPassword", placeholder="Confirm your password", required)
+      .form-group
+        label.checkbox-container
+          input#terms(type="checkbox", required)
+          span.checkmark
+          | I agree to the 
+          a(href="terms.html") Terms of Service
+          |  and 
+          a(href="privacy.html") Privacy Policy
+      button.btn.btn-primary(type="submit") Create Account
+    .signup-prompt
+      p Already have an account?
+      a.btn.btn-secondary(href="/login") Sign In

@@ -1,0 +1,28 @@
+//- Mixins file for reusable components
+
+//- Product card mixin
+mixin productCard(imgSrc, productName, price, link)
+  .product-card
+    a(href=link)
+      img(src=imgSrc, alt=productName)
+      if block
+        block
+      else
+        .product-info
+          h3= productName
+          p.price= price
+
+//- Form input mixin
+mixin formInput(type, id, label, placeholder, required)
+  .form-group
+    label(for=id)= label
+    input(id=id, type=type, placeholder=placeholder, required=required)
+
+//- Button mixin
+mixin button(type, className, text)
+  button(type=type, class=className)= text
+
+//- Social icon mixin
+mixin socialIcon(platform, imgSrc)
+  a(href="#", aria-label=platform)
+    img(src=imgSrc, alt=platform)

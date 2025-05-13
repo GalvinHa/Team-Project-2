@@ -1,0 +1,19 @@
+{
+  "name": "team-project-2-main",
+  "version": "1.0.0",
+  "description": "something something about the site like a summary",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "pug": "^3.0.3",
+    "sqlite3": "^5.1.7"
+  }
+}

@@ -1,0 +1,25 @@
+extends layout
+
+block head
+  title Login - GearNexus
+  link(rel="stylesheet", href="css/login-page.css")
+
+block content
+  .login-container
+    h1 Login
+    if error
+      .error-message
+        p= error
+    form#login-form(action="/login" method="post")
+      .form-group
+        label(for="email") Email
+        input#email(type="email", name="email", placeholder="Email", required, value=email)
+      .form-group
+        label(for="password") Password
+        input#password(type="password", name="password", placeholder="Password", required)
+      .forgot-password
+        a(href="#") Forgot password?
+      button.btn.btn-primary(type="submit") Sign In
+    .signup-prompt
+      p Don't Have an account?
+      a.btn.btn-secondary(href="/signup") Sign Up
