@@ -1,0 +1,50 @@
+extends layout
+
+block head
+  link(rel="stylesheet", href="css/store-page.css")
+
+block content
+
+  .product-page-container  
+    h1 Product List
+
+    h3 
+      | Browsing: 
+      span.browsing-category All
+    h4 Filter by Type
+    //- Mobile dropdown menu
+    select.product-category-mobile
+      option(value="All") All
+      option(value="Mice") Mice
+      option(value="keyboards") Keyboards
+      option(value="headsets") Headsets
+      option(value="monitors") Monitors
+        //- Desktop dropdown menu
+    aside#filter-sidebar
+      ul.product-category-desktop
+        li
+          label
+            input(type="checkbox" name="product-type" value="All")
+            |  All
+        li
+          label
+            input(type="checkbox" name="product-type" value="Mice")
+            |  Mice
+        li
+          label
+            input(type="checkbox" name="product-type" value="keyboards")
+            |  Keyboards
+        li
+          label
+            input(type="checkbox" name="product-type" value="headsets")
+            |  Headsets
+        li
+          label
+            input(type="checkbox" name="product-type" value="monitors")
+            |  Monitors
+
+    .product-list-container#productList
+
+
+append scripts
+  script(src="js/store.js")

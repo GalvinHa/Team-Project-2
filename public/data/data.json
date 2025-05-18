@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Glorious Gaming - Model O Wireless",
+    "price": 49.99,
+    "mainImage": "assets/images/mice/gg-model-o-2-wireless/wireless-o-hero.jpg",
+    "carouselImages": [
+      "assets/images/mice/gg-model-o-2-wireless/wireless-o-front.jpg",
+      "assets/images/mice/gg-model-o-2-wireless/wireless-o-Lside.jpg",
+      "assets/images/mice/gg-model-o-2-wireless/wireless-o-Rside.jpg",
+      "assets/images/mice/gg-model-o-2-wireless/wireless-o-pers.jpg"
+    ],
+    "category": "Mice",
+    "description": "Edit in JSON"
+  },
+  {
+    "id": 2,
+    "name": "Logitech - G Pro 2 Wireless",
+    "price": 109.99,
+    "mainImage": "assets/images/mice/logitech-g-pro-2/g-pro-2-hero.jpg",
+    "carouselImages": [
+        "assets/images/mice/logitech-g-pro-2/g-pro-2-overhead.jpg",
+        "assets/images/mice/logitech-g-pro-2/g-pro-2-perspective.jpg",
+        "assets/images/mice/logitech-g-pro-2/g-pro-2-Rside.jpg",
+        "assets/images/mice/logitech-g-pro-2/g-pro-2-switches.jpg"
+    ],
+    "category": "Mice",
+    "description": "Edit in JSON"
+  },
+    {
+    "id": 3,
+    "name": "Razer - Viper V3",
+    "price": 115.99,    
+    "mainImage": "assets/images/mice/razer-viper-v3/viper-v3-hero.jpg",
+    "carouselImages": [
+      "assets/images/mice/razer-viper-v3/viper-v3-profile.jpg",
+      "assets/images/mice/razer-viper-v3/viper-v3-switch.jpg",
+      "assets/images/mice/razer-viper-v3/viper-v3-batt.jpg",
+      "assets/images/mice/razer-viper-v3/viper-v3-underside.jpg"
+    ],
+    "category": "Mice",
+    "description": "Edit in JSON"
+  }
+]

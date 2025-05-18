@@ -41,6 +41,15 @@ app.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign Up' });
 });
 
+app.get('/store.html', (req, res) => {
+  res.render('store', { title: 'Store' });
+});
+
+app.get('/store', (req, res) => {
+  res.render('store', { title: 'Store' });
+});
+
+
 app.get('/product-page.html', (req, res) => {
   const product = {
     id: 1,

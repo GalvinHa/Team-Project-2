@@ -1,0 +1,20 @@
+What was done?
+- did the store-page.pug and the styles for it
+- compiled images to use for the products, hotlinking images isn't reliable so I had to resort to local hosting; but if
+you guys have any better idea for an alternative for this pls let us know
+- started data.json for the product info
+- made sure that dynamic product card for the store works
+
+- changed the hero banner for a better one
+
+* We can work on this simultaneously now since everything should now be separated and we can just do branches for stuff that
+we are going to be specifically working on; we just let each other know
+
+What's next?
+- desktop view still needed and an aside category selection (store.pug)
+- continue JSON for all of our products
+- Jerome will finish favorites page and someone can work on the about page
+- Jerome is checking out how the images for carousel is going to work and looking ways to better manage image sizes for the store 
+and carousel feature
+
+
