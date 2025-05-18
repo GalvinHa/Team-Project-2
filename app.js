@@ -94,6 +94,7 @@ app.get('/product-page', (req, res) => {
   });
 });
 
+
 app.get('/store.html', (req, res) => {
   res.render('store', { title: 'Store' });
 });

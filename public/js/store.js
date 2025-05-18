@@ -6,6 +6,7 @@ fetch('/data/data.json')
     products.forEach(product => {
       const card = document.createElement('div');
       card.className = 'product-card';
+
       card.innerHTML = `
         <img class="product-main-image" src="${product.mainImage}" alt="${product.name}" />
         <h4 class="product-name">${product.name}</h4>

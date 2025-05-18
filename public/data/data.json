@@ -19,18 +19,18 @@
     "price": 109.99,
     "mainImage": "assets/images/mice/logitech-g-pro-2/g-pro-2-hero.jpg",
     "carouselImages": [
-        "assets/images/mice/logitech-g-pro-2/g-pro-2-overhead.jpg",
-        "assets/images/mice/logitech-g-pro-2/g-pro-2-perspective.jpg",
-        "assets/images/mice/logitech-g-pro-2/g-pro-2-Rside.jpg",
-        "assets/images/mice/logitech-g-pro-2/g-pro-2-switches.jpg"
+      "assets/images/mice/logitech-g-pro-2/g-pro-2-overhead.jpg",
+      "assets/images/mice/logitech-g-pro-2/g-pro-2-perspective.jpg",
+      "assets/images/mice/logitech-g-pro-2/g-pro-2-Rside.jpg",
+      "assets/images/mice/logitech-g-pro-2/g-pro-2-switches.jpg"
     ],
     "category": "Mice",
     "description": "Edit in JSON"
   },
-    {
+  {
     "id": 3,
     "name": "Razer - Viper V3",
-    "price": 115.99,    
+    "price": 115.99,
     "mainImage": "assets/images/mice/razer-viper-v3/viper-v3-hero.jpg",
     "carouselImages": [
       "assets/images/mice/razer-viper-v3/viper-v3-profile.jpg",
@@ -39,6 +39,48 @@
       "assets/images/mice/razer-viper-v3/viper-v3-underside.jpg"
     ],
     "category": "Mice",
+    "description": "Edit in JSON"
+  },
+  {
+    "id": 4,
+    "name": "Redragon - Antonium K728",
+    "price": 120.00,
+    "mainImage": "assets/images/keyboard/rg-antonium-k728/hero.jpg",
+    "carouselImages": [
+      "assets/images/keyboard/rg-antonium-k728/79f00483-56e3-44e3-bbfe-02950d78e018.jpg",
+      "assets/images/keyboard/rg-antonium-k728/77367444-64fe-4a96-8a6b-303ef16e46f6.jpg",
+      "assets/images/keyboard/rg-antonium-k728/f239301c-cd81-4526-9193-ce942bb85aaa.jpg",
+      "assets/images/keyboard/rg-antonium-k728/745d46ac-508c-4821-b33e-b04e1bdcf087.jpg"
+    ],
+    "category": "Keyboard",
+    "description": "Edit in JSON"
+  },
+  {
+    "id": 5,
+    "name": "Redragon - Shiva K516 Pro",
+    "price": 65.99,
+    "mainImage": "assets/images/keyboard/shiva-k516-pro/hero.jpg",
+    "carouselImages": [
+      "assets/images/keyboard/shiva-k516-pro/5b660dbe-b376-443a-8e8d-fefdf2840320.jpg",
+      "assets/images/keyboard/shiva-k516-pro/bd348105-1b9f-4dec-9c91-2a21629e923a.jpg",
+      "assets/images/keyboard/shiva-k516-pro/258576aa-4d45-46c1-bfd0-2c4351161759.jpg",
+      "assets/images/keyboard/shiva-k516-pro/bd348105-1b9f-4dec-9c91-2a21629e923a.jpg"
+    ],
+    "category": "Keyboard",
+    "description": "Edit in JSON"
+  },
+  {
+    "id": 6,
+    "name": "SteelSeries - Apex 3 TKL",
+    "price": 209.99,
+    "mainImage": "assets/images/keyboard/ss-apex-3-tkl/hero.jpg",
+    "carouselImages": [
+      "assets/images/keyboard/ss-apex-3-tkl/apex-3-2.jpg",
+      "assets/images/keyboard/ss-apex-3-tkl/apex-3-resistance.jpg",
+      "assets/images/keyboard/ss-apex-3-tkl/apex-3-switches.jpg",
+      "assets/images/keyboard/ss-apex-3-tkl/apex-3 feature.jpg"
+    ],
+    "category": "Keyboard",
     "description": "Edit in JSON"
   }
 ]

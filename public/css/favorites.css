@@ -9,6 +9,20 @@
     font-family: "Roboto", sans-serif;
 */
 
+h2{
+    font-size: 4rem;
+}
+
+.favorites-page-container{
+    min-height: 100vh;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
 .product-card{
     display: flex;
     flex-direction: column;
@@ -33,7 +47,6 @@
 }
 
 .favorite-product-container {
-    min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -41,7 +54,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 2rem;
 }
 
 
