@@ -1,0 +1,33 @@
+extends layout
+
+block head
+  title My Profile - GearNexus
+  link(rel="stylesheet", href="/css/profile.css")
+
+block content
+  .profile-container
+    h1 My Profile
+    .profile-card
+      .profile-header
+        h2 Account Information
+      .profile-content
+        .profile-section
+          h3 Personal Information
+          .info-group
+            .info-label Full Name:
+            .info-value= user.fullname
+          .info-group
+            .info-label Email:
+            .info-value= user.email
+          a.btn.btn-primary(href="#") Edit Profile
+        
+        .profile-section
+          h3 Account Security
+          .info-group
+            .info-label Password:
+            .info-value ••••••••
+          a.btn.btn-primary(href="#") Change Password
+        
+        .profile-section
+          h3 Account Actions
+          a.btn.btn-secondary(href="/logout") Logout

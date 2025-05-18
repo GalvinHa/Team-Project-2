@@ -6,52 +6,53 @@ block head
 
 block content
   #product-page-content
-    .product-media
-      img#mainImage.main-image(
-        src="https://images.unsplash.com/photo-1605773527852-c546a8584ea3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        alt="Product")
-      .carousel-wrapper
-        .arrow(onclick="prevImage()") ❮
-        #thumbContainer.thumbnails
-        .arrow(onclick="nextImage()") ❯
-    
-    .product-details
-      h2.product-title= product ? product.title : 'Product Title'
-      p.product-price= product ? `$${product.price} USD` : '$20.00 USD'
-      .product-selection-section
-        //- MOBILE: native dropdown
-        select.option-dropdown
-          option(value="") Pick an option
-          option(value="lightweight") Lightweight
-          option(value="wireless") Wireless
-          option(value="high-dpi") High DPI
-          option(value="rgb") RGB Lighting
-          option(value="extra-buttons") Extra Side Buttons
+    .product-container 
+      .product-media
+        img#mainImage.main-image(
+          src="https://images.unsplash.com/photo-1605773527852-c546a8584ea3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          alt="Product")
+        .carousel-wrapper
+          .arrow(onclick="prevImage()") ❮
+          #thumbContainer.thumbnails
+          .arrow(onclick="nextImage()") ❯
+      
+      .product-details
+        h2.product-title= product ? product.title : 'Product Title'
+        p.product-price= product ? `$${product.price} USD` : '$20.00 USD'
+        .product-selection-section
+          //- MOBILE: native dropdown
+          select.option-dropdown
+            option(value="") Pick an option
+            option(value="lightweight") Lightweight
+            option(value="wireless") Wireless
+            option(value="high-dpi") High DPI
+            option(value="rgb") RGB Lighting
+            option(value="extra-buttons") Extra Side Buttons
+          
+          //- DESKTOP: pill buttons
+          .option-pills
+            button.option-btn(type="button") Lightweight
+            button.option-btn(type="button") Wireless
+            button.option-btn(type="button") High DPI
+            button.option-btn(type="button") RGB Lighting
+            button.option-btn(type="button") Extra Side Buttons
         
-        //- DESKTOP: pill buttons
-        .option-pills
-          button.option-btn(type="button") Lightweight
-          button.option-btn(type="button") Wireless
-          button.option-btn(type="button") High DPI
-          button.option-btn(type="button") RGB Lighting
-          button.option-btn(type="button") Extra Side Buttons
-      
-      button.add-to-cart-btn Add To Cart
-      
-      .product-feature-section
-        h3.product-about-heading Features:
-        ul
-          if product && product.features
-            each feature in product.features
-              li= feature
-          else
-            li Feature 1
-            li Feature 2
-            li Feature 3
-      
-      .shipping-info-section
-        h3.product-about-heading Shipping Info:
-        p Orders are processed within 1–2 business days. Standard shipping takes 3–7 business days. Expedited options available at checkout. Tracking provided once shipped.
+        button.add-to-cart-btn Add To Cart
+        
+        .product-feature-section
+          h3.product-about-heading Features:
+          ul
+            if product && product.features
+              each feature in product.features
+                li= feature
+            else
+              li Feature 1
+              li Feature 2
+              li Feature 3
+        
+        .shipping-info-section
+          h3.product-about-heading Shipping Info:
+          p Orders are processed within 1–2 business days. Standard shipping takes 3–7 business days. Expedited options available at checkout. Tracking provided once shipped.
 
 block scripts
   script.

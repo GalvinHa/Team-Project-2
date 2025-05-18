@@ -2,23 +2,27 @@ extends layout
 
 block head
   title Sign Up - GearNexus
+  link(rel="stylesheet", href="css/login-page.css")
 
 block content
   .login-container
     h1 Create Account
-    form#signup-form
+    if error
+      .error-message
+        p= error
+    form#signup-form(action="/signup" method="post")
       .form-group
         label(for="fullname") Full Name
-        input#fullname(type="text", placeholder="Enter your full name", required)
+        input#fullname(type="text", name="fullname", placeholder="Enter your full name", required, value=fullname)
       .form-group
         label(for="email") Email
-        input#email(type="email", placeholder="Enter your email", required)
+        input#email(type="email", name="email", placeholder="Enter your email", required, value=email)
       .form-group
         label(for="password") Password
-        input#password(type="password", placeholder="Create a password", required)
+        input#password(type="password", name="password", placeholder="Create a password", required)
       .form-group
-        label(for="confirm-password") Confirm Password
-        input#confirm-password(type="password", placeholder="Confirm your password", required)
+        label(for="confirmPassword") Confirm Password
+        input#confirmPassword(type="password", name="confirmPassword", placeholder="Confirm your password", required)
       .form-group
         label.checkbox-container
           input#terms(type="checkbox", required)
@@ -30,8 +34,4 @@ block content
       button.btn.btn-primary(type="submit") Create Account
     .signup-prompt
       p Already have an account?
-      a.btn.btn-secondary(href="login.html") Sign In
-
-block scripts
-  script(src="js/script.js")
-  script(src="js/signup.js")
+      a.btn.btn-secondary(href="/login") Sign In
