@@ -2,10 +2,11 @@
   "name": "team-project-2-main",
   "version": "1.0.0",
   "description": "something something about the site like a summary",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
