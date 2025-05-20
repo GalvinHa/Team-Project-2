@@ -33,13 +33,18 @@ html(lang="en")
               img(src="assets/logos/navbar-favorite-icon.svg", alt="Favorites")
               span.navbar-item-label Favorites
           li
-            a.cart-btn(href="#")
+            a.cart-btn(href="cart.html")
               img(src="assets/logos/navbar-cart-icon.svg", alt="Bag/Cart")
               span.navbar-item-label Cart
           li
-            a.profile-btn(href="login.html")
-              img(src="assets/logos/navbar-account-icon.svg", alt="Account")
-              span.navbar-item-label Account
+            if user
+              a.profile-btn(href="/profile")
+                img(src="assets/logos/navbar-account-icon.svg", alt="Account")
+                span.navbar-item-label Account
+            else
+              a.profile-btn(href="/login.html")
+                img(src="assets/logos/navbar-account-icon.svg", alt="Account")
+                span.navbar-item-label Account
       block hero
     
     main
@@ -62,7 +67,7 @@ html(lang="en")
           h3 Quick Links
           ul
             li
-              a(href="shop.html") Shop All
+              a(href="store.html") Shop All
             li
               a(href="index.html") Front Page
             li

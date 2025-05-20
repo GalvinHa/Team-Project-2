@@ -6,9 +6,13 @@ block head
 block content
   .favorites-page-container     
     h2 Favorites
+    
+    //- This div will be shown when there are no favorites
+    .favorites-page-content#empty-favorites-container
+
+    
+    //- This container will hold favorite products when there are any
     .favorite-product-container#favorited-product
 
-
-
 append scripts
-    script(src="js/favorites.js")
+  script(src="js/favorites.js")

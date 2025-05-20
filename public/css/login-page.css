@@ -1,12 +1,4 @@
-:root {
-    --background-color: #F1F5F9;
-    --error: #EF4444;
-    --green: #10B981;
-    --warning: #FACC15;
-    --accent-color: #9CA3AF;
-    --text-color: rgb(39, 39, 39);
-    --link-highlight: rgba(255, 103, 14, 0.993);
-}
+
 
 /**
     Heading: 
@@ -18,27 +10,34 @@
 
 
 /*Checkbox signup forum */
-
 .checkbox-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     cursor: pointer;
     font-size: 0.9rem;
-    margin-bottom: .5em;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.25rem; 
 }
 
-.checkbox-container input {
+.checkbox-container input[type="checkbox"] {
     width: auto;
-    margin-right: 10rem;
+    margin-left: 0.5rem;
+    flex-shrink: 0; /* Prevent the checkbox from shrinking */
 }
 
-.checkbox-container a {
-    color: var(--green);
-    text-decoration: none;
+
+/* Ensure links in the checkbox label maintain styling */
+.checkbox-container label {
+    flex-grow: 1; /* Allow label to take up available space */
+    font-weight: 500; /* Match your other form labels */
 }
 
-.checkbox-container a:hover {
+.checkbox-container label a:hover {
     text-decoration: underline;
 }
 
@@ -146,7 +145,7 @@
 .form-group input {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid var(--accent-color);
+    border: 1px solid #333;
     border-radius: 0.25rem;
     font-size: 1rem;
 }
@@ -157,7 +156,7 @@
 }
 
 .forgot-password a {
-    color: var(--accent-color);
+    color: #333;
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -184,7 +183,7 @@
 
 .btn-secondary {
     background-color: #e5e7eb;
-    color: var(--text-color);
+    color: #333;
     margin-top: 1rem;
 }
 

@@ -24,13 +24,12 @@ block content
         label(for="confirmPassword") Confirm Password
         input#confirmPassword(type="password", name="confirmPassword", placeholder="Confirm your password", required)
       .form-group
-        label.checkbox-container
-          input#terms(type="checkbox", required)
-          span.checkmark
-          | I agree to the 
-          a(href="terms.html") Terms of Service
-          |  and 
-          a(href="privacy.html") Privacy Policy
+        .checkbox-container
+          label(for="termsAgree") I agree to the 
+            a(href="/terms") Terms of Service
+            |  and 
+            a(href="/privacy") Privacy Policy
+          input#termsAgree(type="checkbox", name="termsAgree", required, checked)
       button.btn.btn-primary(type="submit") Create Account
     .signup-prompt
       p Already have an account?
