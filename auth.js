@@ -1,4 +1,4 @@
-// auth.js - Simplified version
+// auth.js - Fixed version
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const fs = require('fs');
@@ -155,14 +155,16 @@ const authController = {
             });
           }
           
+          // Use the last inserted ID from this.lastID
+          const newUserId = this.lastID;
+          
           req.session.user = {
-            id: user.id,
-            email: user.email,
-            fullname: user.fullname
+            id: newUserId,
+            email: email,
+            fullname: fullname
           };
           
           res.redirect('/profile');
-
         }
       );
     });
@@ -178,8 +180,6 @@ const authController = {
   }
 };
 
-
-
 // Explicitly log what we're exporting
 console.log('Exporting from auth.js:', {
   authMiddleware: typeof authMiddleware,
@@ -191,6 +191,3 @@ module.exports = {
   authMiddleware,
   authController
 };
-
-
-

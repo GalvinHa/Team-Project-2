@@ -21,15 +21,36 @@
     --error: #EF4444;
     --green: #10B981;
     --warning: #FACC15;
-    --accent-color: #9CA3AF;
-    --text-color: rgb(39, 39, 39);
+    --accent-color: #d19c47;
+
+    --text-color: rgb(57, 19, 19);
     --link-highlight: rgba(255, 103, 14, 0.993);
+    --border-color: #e0e0e0;
+    --secondary-color: #f0f0f0;
+    --secondary-color-dark: #e0e0e0;
 }
 
 body {
     background-color: var(--background-color);
     min-height: 100vh;
     padding-top: 4.5rem;
+}
+
+/* Global image styles to ensure consistency */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Default to contain for consistent image display */
+}
+
+/* Product image containers for consistent display */
+.product-image-container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
 
@@ -297,6 +318,60 @@ ul>* {
 
 .footer-bottom p {
     margin: 0;
+}
+
+/* Common button styles */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border: none;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-primary {
+    background-color: var(--warning);
+    color: var(--text-color);
+}
+
+.btn-primary:hover {
+    background-color: #e8bb13;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color-dark);
+}
+
+.btn-danger {
+    background-color: var(--error);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #d03636;
+}
+
+/* Card shadow and hover effects */
+.card-shadow {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 768px) {

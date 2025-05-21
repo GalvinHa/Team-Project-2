@@ -18,3 +18,22 @@ What's next?
 and carousel feature
 
 
+
+Galvin
+What was done?
+I fixed the carousel so it scales down the image to fit in a square. I applied it to the fronpage as well. 
+Also changed --accent-color to orange(We could change if we dont like it)
+Product Page now only has options for mice.
+I added the catgory section as well and it works.
+Cart works can add and all totals are all working
+Fixed front page to be dynamic. 
+Favorites works makes a local list and pulls from json. Add and remove works
+added CSS for store.pug
+
+ToDo:
+Mainly Proced to order Page
+About section
+If you can think of anything else please let me know.
+
+
+

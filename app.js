@@ -66,34 +66,86 @@ app.get('/index.html', (req, res) => {
   res.render('index', { title: 'Home' });
 });
 
+// Add cart routes for both /cart and /cart.html
+app.get('/cart', (req, res) => {
+  res.render('cart', { title: 'Shopping Cart' });
+});
+
+app.get('/cart.html', (req, res) => {
+  res.render('cart', { title: 'Shopping Cart' });
+});
+
 app.get('/product-page.html', (req, res) => {
-  const product = {
-    id: 1,
-    title: 'Product Name',
-    price: '20.00',
-    features: ['Feature 1', 'Feature 2', 'Feature 3']
-  };
+  // Check if there's a product ID in the query params
+  const productId = req.query.id;
   
-  res.render('product-page', { 
-    title: product.title,
-    product: product
-  });
+  if (productId) {
+    // If there's a product ID, we'll fetch the data from JSON file
+    try {
+      const dataPath = path.join(__dirname, 'public', 'data', 'data.json');
+      const productsData = fs.readFileSync(dataPath, 'utf8');
+      const products = JSON.parse(productsData);
+      
+      // Find the product with the matching ID
+      const product = products.find(p => p.id === parseInt(productId));
+      
+      if (product) {
+        // If product found, render the page with the product data
+        res.render('product-page', { 
+          title: product.name,
+          product: {
+            id: product.id,
+            title: product.name,
+            price: product.price,
+            category: product.category, // Include the category
+            features: product.description ? [product.description] : ['Feature 1', 'Feature 2', 'Feature 3']
+          }
+        });
+      } else {
+        // Product not found
+        res.render('product-page', { 
+          title: 'Product Not Found',
+          product: {
+            id: 0,
+            title: 'Product Not Found',
+            price: '0.00',
+            category: '',
+            features: ['Product not found']
+          }
+        });
+      }
+    } catch (error) {
+      console.error('Error loading product data:', error);
+      // Fallback to default product
+      res.render('product-page', { 
+        title: 'Product Page',
+        product: {
+          id: 1,
+          title: 'Product Name',
+          price: '20.00',
+          category: 'Mice', // Default category
+          features: ['Feature 1', 'Feature 2', 'Feature 3']
+        }
+      });
+    }
+  } else {
+    // If no product ID, render with default product
+    res.render('product-page', { 
+      title: 'Product Page',
+      product: {
+        id: 1,
+        title: 'Product Name',
+        price: '20.00',
+        category: 'Mice', // Default category
+        features: ['Feature 1', 'Feature 2', 'Feature 3']
+      }
+    });
+  }
 });
-
 app.get('/product-page', (req, res) => {
-  const product = {
-    id: 1,
-    title: 'Product Name',
-    price: '20.00',
-    features: ['Feature 1', 'Feature 2', 'Feature 3']
-  };
-  
-  res.render('product-page', { 
-    title: product.title,
-    product: product
-  });
+  // Redirect to the HTML version to maintain consistent URLs
+  res.redirect('/product-page.html' + (req.query.id ? `?id=${req.query.id}` : ''));
 });
-
 
 app.get('/store.html', (req, res) => {
   res.render('store', { title: 'Store' });
@@ -109,6 +161,18 @@ app.get('/favorites.html', (req, res) => {
 
 app.get('/favorites', (req, res) => {
   res.render('favorites', { title: 'Favorites' });
+});
+
+// Add data.json endpoint to serve product data directly
+app.get('/api/products', (req, res) => {
+  try {
+    const dataPath = path.join(__dirname, 'public', 'data', 'data.json');
+    const productsData = fs.readFileSync(dataPath, 'utf8');
+    res.json(JSON.parse(productsData));
+  } catch (error) {
+    console.error('Error loading products data:', error);
+    res.status(500).json({ error: 'Failed to load products data' });
+  }
 });
 
 app.get('/product-carousel', (req, res) => {

@@ -1,36 +1,44 @@
-:root {
-    --background-color: #F1F5F9;
-    --error: #EF4444;
-    --green: #10B981;
-    --warning: #FACC15;
-    --accent-color: #9CA3AF;
-    --text-color: rgb(39, 39, 39);
-    --link-highlight: rgba(255, 103, 14, 0.993);
-}
+
+
 
 /**
-    Heading: 
+    Heading:
     font-family: "Poppins", sans-serif;
-    
-    Body: 
+   
+    Body:
     font-family: "Roboto", sans-serif;
 */
 
 
+
+
 /**
+
 
 product-page styles below
 
+
 **/
+
+
+
+
+.product-container {
+    margin-top: 6rem;
+}
+
+
 
 .main-image {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 450px; /* Increased height for better display */
+    object-fit: contain; /* Changed to contain to prevent distortion */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     margin-bottom: 1rem;
+    background-color: white; /* Add white background to ensure consistency */
 }
+
 
 .carousel-wrapper {
     display: flex;
@@ -38,6 +46,7 @@ product-page styles below
     justify-content: center;
     gap: 1rem;
 }
+
 
 .arrow {
     background: white;
@@ -53,9 +62,11 @@ product-page styles below
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .arrow:active {
     transform: scale(0.95);
 }
+
 
 .thumbnails {
     display: flex;
@@ -64,23 +75,28 @@ product-page styles below
     width: 300px;
 }
 
+
 .thumbnails img {
-    width: 100%;
-    height: 45px;
-    object-fit: cover;
+    width: 60px;
+    height: 60px;
+    object-fit: contain; /* Changed to contain for consistency */
     border-radius: 6px;
     cursor: pointer;
     border: 2px solid transparent;
     transition: border 0.2s;
+    background-color: white; /* Add white background */
 }
+
 
 .thumbnails img.active {
     border-color: #007bff;
 }
 
+
 .product-title {
     margin-top: 2rem;
 }
+
 
 .product-selection-section {
     display: flex;
@@ -90,13 +106,16 @@ product-page styles below
     align-items: center;
 }
 
+
 .product-selection-section * {
     margin: .5rem;
 }
 
+
 .product-selection-section>label {
     font-weight: 800;
 }
+
 
 .add-to-cart-btn {
     font-weight: 800;
@@ -105,23 +124,33 @@ product-page styles below
     background-color: var(--warning);
     width: 100%;
     margin: 1rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+.add-to-cart-btn:hover {
+    background-color: #e8bb13; /* Darker shade of --warning */
+    
+    
+}
+
 
 
 
 @media (min-width: 768px) {
 
+
     /* make main into a 2-column grid */
-    #product-page-content {
+    .product-container {
+     
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
         align-items: start;
         max-width: 1200px;
-        margin: 0 auto;
-        padding: 4rem 2rem;
+        margin: 6rem auto 0; /* Keep top margin while centering horizontally */
+        padding: 2rem;
     }
-
     /* left column: image + carousel */
     .product-media {
         display: flex;
@@ -129,14 +158,19 @@ product-page styles below
         gap: 1rem;
     }
 
+
     .product-media .main-image {
         width: 100%;
-        height: auto;
+        height: 450px; /* Keep consistent height */
+        max-width: 500px; /* Add maximum width to prevent stretching */
+        margin: 0 auto; /* Center the image */
     }
+
 
     .product-media .carousel-wrapper {
         justify-self: center;
     }
+
 
     /* right column: details flow */
     .product-details {
@@ -145,10 +179,12 @@ product-page styles below
         gap: 1.5rem;
     }
 
+
     .product-details .product-title,
     .product-details .product-price {
         width: 100%;
     }
+
 
     .product-details .product-selection-section {
         display: flex;
@@ -157,18 +193,22 @@ product-page styles below
         flex-wrap: nowrap;
     }
 
+
     .product-details .add-to-cart-btn {
         width: 100%;
         padding: 1rem 2rem;
     }
 }
 
+
 /* —— PRODUCT DETAILS TIGHTENING & BUTTON STYLING —— */
+
 
 /* always left-align details */
 .product-details {
     text-align: left;
 }
+
 
 /* grey background for title */
 .product-title {
@@ -180,12 +220,15 @@ product-page styles below
     margin-bottom: 0.5rem;
 }
 
+
 /* price spacing */
 .product-price {
     margin: 0.25rem 0 1rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 600;
+    color: var(--accent-color);
 }
+
 
 /* layout of option buttons */
 .product-selection-section {
@@ -196,6 +239,7 @@ product-page styles below
     margin-bottom: 1rem;
 }
 
+
 /* pill-style option buttons */
 .option-btn {
     padding: 0.4rem 1rem;
@@ -204,13 +248,22 @@ product-page styles below
     background-color: #f5f5f5;
     font-size: 0.9rem;
     cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s;
+    transition: all 0.2s;
 }
+
 
 .option-btn:hover {
     background-color: #e0e0e0;
     border-color: #333;
 }
+
+/* New styles for active state */
+.option-btn.active {
+    background-color:#333;
+    color: white;
+    border-color: var(--option-active);
+}
+
 
 /* tighten feature & shipping lists */
 .product-feature-section,
@@ -218,17 +271,21 @@ product-page styles below
     margin-bottom: 1rem;
 }
 
+
 .product-feature-section ul,
 .shipping-info-section p {
     margin-left: 1rem;
 }
+
 
 .product-feature-section ul li {
     list-style: disc;
     margin-left: 1rem;
 }
 
+
 /* ——— OPTION-SWITCHER: dropdown on mobile, pills on desktop ——— */
+
 
 .option-dropdown {
     display: block;
@@ -246,11 +303,13 @@ product-page styles below
     cursor: pointer;
 }
 
+
 .option-pills {
     display: none;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
+
 
 /* desktop: hide dropdown, show pills */
 @media (min-width: 768px) {
@@ -258,7 +317,50 @@ product-page styles below
         display: none;
     }
 
+
     .option-pills {
         display: flex;
     }
+}
+
+/* Confirmation popup styles */
+.cart-confirmation {
+    font-family: "Roboto", sans-serif;
+}
+
+.cart-confirmation-content p {
+    margin-bottom: 15px;
+}
+
+.cart-confirmation-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.continue-shopping-btn,
+.view-cart-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.continue-shopping-btn {
+    background-color: #f0f0f0;
+}
+
+.continue-shopping-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.view-cart-btn {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.view-cart-btn:hover {
+    background-color: var(--link-highlight);
 }
