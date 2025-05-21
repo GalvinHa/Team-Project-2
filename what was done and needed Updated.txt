@@ -30,10 +30,14 @@ Fixed front page to be dynamic.
 Favorites works makes a local list and pulls from json. Add and remove works
 added CSS for store.pug
 
-ToDo:
-Mainly Proced to order Page
-About section
-If you can think of anything else please let me know.
+
+
+Sparsh
+Finished about page, but please edit your little description for yourself 
+
+ToDos left:
+Orders page
+
 
 
 
