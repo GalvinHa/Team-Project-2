@@ -163,6 +163,14 @@ app.get('/favorites', (req, res) => {
   res.render('favorites', { title: 'Favorites' });
 });
 
+app.get('/about.html', (req, res) => {
+  res.render('about', { title: 'About us' });
+});
+
+app.get('/about', (req, res) => {
+  res.render('about', { title: 'About us' });
+});
+
 // Add data.json endpoint to serve product data directly
 app.get('/api/products', (req, res) => {
   try {
