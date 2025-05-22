@@ -22,3 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBtn.classList.toggle("open"); // Optional: animate hamburger icon
   });
 });
+
+

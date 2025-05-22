@@ -107,6 +107,7 @@ ul>* {
     caret-color: transparent;
 }
 
+
 .logo-container {
     display: flex;
     flex-direction: column;
@@ -372,6 +373,12 @@ ul>* {
 .card-shadow:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#support-email{
+    text-decoration: none;
+    color: var(--link-highlight);
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
