@@ -20,7 +20,10 @@ product-page styles below
 
 **/
 
-
+#product-page-content{
+    padding: 2rem;
+    min-height: 100vh;
+}
 
 
 .product-container {

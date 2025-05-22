@@ -69,6 +69,7 @@ function updateProductPage(product) {
     updateCarousel();
   }
   
+  
   // Add product features
   const featuresList = document.querySelector('.product-feature-section ul');
   if (featuresList) {
@@ -87,9 +88,11 @@ function updateProductPage(product) {
       });
     } else {
       // Add product description as a feature
-      const li = document.createElement('li');
-      li.textContent = product.description;
-      featuresList.appendChild(li);
+      product.description.forEach((point) => {
+        const li = document.createElement("li");
+        li.textContent = point;
+        featuresList.appendChild(li);
+      });
     }
   }
   
@@ -100,51 +103,52 @@ function updateProductPage(product) {
   }
 }
 
-function getGenericFeatures(category) {
-  // Return category-specific features
-  switch (category) {
-    case 'Mice':
-      return [
-        'High-precision optical sensor',
-        'Ergonomic design for comfortable use',
-        'Customizable buttons',
-        'Durable construction',
-        'Compatible with all operating systems'
-      ];
-    case 'Keyboard':
-      return [
-        'Mechanical switches for precise feedback',
-        'RGB backlighting with customizable effects',
-        'N-key rollover for accurate input',
-        'Durable keycaps',
-        'Programmable macro keys'
-      ];
-    case 'Headphone':
-      return [
-        'Immersive sound quality',
-        'Comfortable over-ear design',
-        'Noise isolation technology',
-        'Built-in microphone',
-        'Long battery life'
-      ];
-    case 'Microphone':
-      return [
-        'Crystal clear audio capture',
-        'Adjustable sensitivity',
-        'Noise cancellation technology',
-        'Sturdy desktop stand included',
-        'Plug-and-play USB connection'
-      ];
-    default:
-      return [
-        'Premium quality construction',
-        'Designed for high performance',
-        'User-friendly interface',
-        'Durable and reliable',
-        'Excellent value for money'
-      ];
-  }
-}
+
+// function getGenericFeatures(category) {
+//   // Return category-specific features
+//   switch (category) {
+//     case 'Mice':
+//       return [
+//         'High-precision optical sensor',
+//         'Ergonomic design for comfortable use',
+//         'Customizable buttons',
+//         'Durable construction',
+//         'Compatible with all operating systems'
+//       ];
+//     case 'Keyboard':
+//       return [
+//         'Mechanical switches for precise feedback',
+//         'RGB backlighting with customizable effects',
+//         'N-key rollover for accurate input',
+//         'Durable keycaps',
+//         'Programmable macro keys'
+//       ];
+//     case 'Headphone':
+//       return [
+//         'Immersive sound quality',
+//         'Comfortable over-ear design',
+//         'Noise isolation technology',
+//         'Built-in microphone',
+//         'Long battery life'
+//       ];
+//     case 'Microphone':
+//       return [
+//         'Crystal clear audio capture',
+//         'Adjustable sensitivity',
+//         'Noise cancellation technology',
+//         'Sturdy desktop stand included',
+//         'Plug-and-play USB connection'
+//       ];
+//     default:
+//       return [
+//         'Premium quality construction',
+//         'Designed for high performance',
+//         'User-friendly interface',
+//         'Durable and reliable',
+//         'Excellent value for money'
+//       ];
+//   }
+// }
 
 function setupOptionButtons() {
   // Add click event listeners to option buttons

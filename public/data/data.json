@@ -11,7 +11,12 @@
       "assets/images/mice/gg-model-o-2-wireless/wireless-o-pers.jpg"
     ],
     "category": "Mice",
-    "description": "Edit in JSON"
+    "description": [
+      "Ultra-lightweight honeycomb shell design",
+      "Lag-free wireless performance",
+      "Adjustable DPI up to 19,000",
+      "Customizable RGB lighting"
+    ]
   },
   {
     "id": 2,
@@ -25,7 +30,12 @@
       "assets/images/mice/logitech-g-pro-2/g-pro-2-switches.jpg"
     ],
     "category": "Mice",
-    "description": "Edit in JSON"
+    "description": [
+      "Designed for professional esports players",
+      "HERO 2 sensor with 32,000 DPI tracking",
+      "Zero-lag Lightspeed wireless",
+      "Ambidextrous and lightweight design"
+    ]
   },
   {
     "id": 3,
@@ -39,7 +49,12 @@
       "assets/images/mice/razer-viper-v3/viper-v3-underside.jpg"
     ],
     "category": "Mice",
-    "description": "Edit in JSON"
+    "description": [
+      "Razer HyperSpeed Wireless technology",
+      "Focus Pro 30K Optical Sensor",
+      "Up to 280-hour battery life",
+      "Lightweight and ergonomic shape"
+    ]
   },
   {
     "id": 4,
@@ -53,7 +68,12 @@
       "assets/images/keyboard/rg-antonium-k728/745d46ac-508c-4821-b33e-b04e1bdcf087.jpg"
     ],
     "category": "Keyboard",
-    "description": "Edit in JSON"
+    "description": [
+      "Full-size mechanical keyboard with RGB lighting",
+      "Hot-swappable keys for customization",
+      "Sturdy aluminum top plate",
+      "Programmable macros and media keys"
+    ]
   },
   {
     "id": 5,
@@ -67,7 +87,12 @@
       "assets/images/keyboard/shiva-k516-pro/bd348105-1b9f-4dec-9c91-2a21629e923a.jpg"
     ],
     "category": "Keyboard",
-    "description": "Edit in JSON"
+    "description": [
+      "Low-profile mechanical switches for fast typing",
+      "Durable aluminum build",
+      "RGB backlighting with multiple effects",
+      "Magnetic wrist rest for comfort"
+    ]
   },
   {
     "id": 6,
@@ -81,7 +106,12 @@
       "assets/images/keyboard/ss-apex-3-tkl/apex-3 feature.jpg"
     ],
     "category": "Keyboard",
-    "description": "Edit in JSON"
+    "description": [
+      "Whisper-quiet gaming switches",
+      "IP32 water-resistant design",
+      "Compact TKL layout for more desk space",
+      "Customizable RGB zones"
+    ]
   },
   {
     "id": 7,
@@ -95,7 +125,12 @@
       "assets/images/headphones/hs80-rgb/5.jpg"
     ],
     "category": "Headphone",
-    "description": "Edit in JSON"
+    "description": [
+      "Dolby Atmos spatial audio support",
+      "Wireless low-latency connection",
+      "Broadcast-grade omni-directional mic",
+      "Memory foam earcups with RGB accents"
+    ]
   },
   {
     "id": 8,
@@ -109,12 +144,17 @@
       "assets/images/headphones/virtuoso-max/9efd344e-0d02-4312-9209-adbcb2d9dd5d.jpg"
     ],
     "category": "Headphone",
-    "description": "Edit in JSON"
+    "description": [
+      "High-fidelity 24bit/96kHz audio playback",
+      "Premium design with memory foam cushions",
+      "Detachable broadcast mic",
+      "Supports SLIPSTREAM wireless and wired"
+    ]
   },
   {
     "id": 9,
     "name": "Corsair - Void Wireless V2",
-    "price": 99.99,
+    "price": 98.99,
     "mainImage": "assets/images/headphones/void-wireless-v2/hero.jpg",
     "carouselImages": [
       "assets/images/headphones/void-wireless-v2/f481d479-48e3-4e7d-9ebb-dfdcd5e94268.jpg",
@@ -123,9 +163,14 @@
       "assets/images/headphones/void-wireless-v2/4285dd9c-624c-4f75-9418-d7f73a25cb05.jpg"
     ],
     "category": "Headphone",
-    "description": "Edit in JSON"
+    "description": [
+      "Wireless gaming headset with 7.1 surround",
+      "Long-lasting battery life",
+      "On-ear volume and mute controls",
+      "Dynamic RGB lighting"
+    ]
   },
-    {
+  {
     "id": 10,
     "name": "Marantz - MPM1000",
     "price": 99.99,
@@ -137,12 +182,17 @@
       "assets/images/microphone/marantz-mpm1000/47c2c39d-8533-45da-888f-3408b6a2405c.jpg"
     ],
     "category": "Microphone",
-    "description": "Edit in JSON"
+    "description": [
+      "Studio-grade condenser microphone",
+      "Smooth, extended frequency response",
+      "Ideal for vocals, streaming, and instruments",
+      "Includes shock mount and windscreen"
+    ]
   },
-    {
+  {
     "id": 11,
     "name": "HyperX - Quadcast 2",
-    "price": 99.99,
+    "price": 100,
     "mainImage": "assets/images/microphone/hyperx-quadcast-2/hero.jpg",
     "carouselImages": [
       "assets/images/microphone/hyperx-quadcast-2/992ff237-2652-4cdd-ace0-3cbc88816e95.jpg",
@@ -151,12 +201,17 @@
       "assets/images/microphone/hyperx-quadcast-2/655d831d-ec4c-4795-8051-9214a833e614.jpg"
     ],
     "category": "Microphone",
-    "description": "Edit in JSON"
+    "description": [
+      "Built-in anti-vibration shock mount",
+      "Four selectable polar patterns",
+      "Tap-to-mute sensor with LED indicator",
+      "USB plug-and-play for PC and console"
+    ]
   },
-    {
+  {
     "id": 12,
     "name": "Maono - PD100",
-    "price": 99.99,
+    "price": 999.99,
     "mainImage": "assets/images/microphone/maono-pd100/hero.jpg",
     "carouselImages": [
       "assets/images/microphone/maono-pd100/b3d537a6-bd8d-4e8a-83a9-7554ceeb8913.jpg",
@@ -165,6 +220,11 @@
       "assets/images/microphone/maono-pd100/58542a63-dfed-400d-933c-d4d90f933031.jpg"
     ],
     "category": "Microphone",
-    "description": "Edit in JSON"
+    "description": [
+      "Dynamic mic with cardioid pickup pattern",
+      "Broadcast-quality audio for streaming & podcasting",
+      "Metal build for durability",
+      "XLR output for professional setups"
+    ]
   }
 ]

@@ -7,24 +7,23 @@ block content
 
   .product-page-container  
     h1 Product List
-
-    h3 
-      | Browsing: 
-      span.browsing-category All
-    h4 Filter by Type
+    #heading-container
+      h3 Browsing: 
+        span#browsing-category All
+      h4 Filter by Type
     //- Mobile dropdown menu
     select.product-category-mobile
       option(value="All") All
       option(value="Mice") Mice
-      option(value="keyboards") Keyboards
-      option(value="headphone") Headsets
-      option(value="monitors") Monitors
+      option(value="Keyboards") Keyboards
+      option(value="Headphones") Headsets
+      option(value="Microphones") Microphones
         //- Desktop dropdown menu
     aside#filter-sidebar
       ul.product-category-desktop
         li
           label
-            input(type="checkbox" name="product-type" value="All")
+            input(type="checkbox" name="product-type" value="All" checked)
             |  All
         li
           label
@@ -32,16 +31,16 @@ block content
             |  Mice
         li
           label
-            input(type="checkbox" name="product-type" value="keyboards")
+            input(type="checkbox" name="product-type" value="Keyboards")
             |  Keyboards
         li
           label
-            input(type="checkbox" name="product-type" value="headphone")
+            input(type="checkbox" name="product-type" value="Headphones")
             |  Headsets
         li
           label
-            input(type="checkbox" name="product-type" value="monitors")
-            |  Monitors
+            input(type="checkbox" name="product-type" value="Microphones")
+            |  Microphones
 
     .product-list-container#productList
 

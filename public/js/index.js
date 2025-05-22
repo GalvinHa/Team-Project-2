@@ -32,13 +32,7 @@ function displayFeaturedProducts(container, products) {
   let featuredHTML = '';
   
   Object.keys(categories).forEach(category => {
-    const categoryProducts = categories[category].slice(0, 3); // Show up to 3 products per category
-    
-    featuredHTML += `
-      <div class="featured-category">
-        <h3>${category}</h3>
-        <div class="products-grid">
-    `;
+    const categoryProducts = categories[category].slice(0, 1); // Show up to 3 products per category
     
     categoryProducts.forEach(product => {
       featuredHTML += `
@@ -56,14 +50,6 @@ function displayFeaturedProducts(container, products) {
         </div>
       `;
     });
-    
-    featuredHTML += `
-        </div>
-        <div class="show-all">
-          <a href="store.html?category=${encodeURIComponent(category)}">View All ${category}</a>
-        </div>
-      </div>
-    `;
   });
   
   container.innerHTML = featuredHTML;

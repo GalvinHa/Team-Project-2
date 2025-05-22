@@ -151,10 +151,6 @@ function displayCartSummary(summaryEl, cartItems) {
   `;
   
   summaryEl.innerHTML = summaryHTML;
-  
-
-
-
 
 
   // Add event listener for checkout button

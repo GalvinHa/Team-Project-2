@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const productListContainer = document.getElementById('productList');
   const categoryCheckboxes = document.querySelectorAll('input[name="product-type"]');
+  const browsingCategory = document.getElementById('browsing-category');
   let selectedCategory = "All"; // Default category
   
   // Fetch products data
@@ -21,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             selectedCategory = this.value;
+            if (browsingCategory) {
+              browsingCategory.textContent = selectedCategory;
+            }
             displayProducts(productListContainer, products, selectedCategory);
           } else {
             // If unchecked, select "All"
@@ -35,13 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       });
+
       
       // Set up mobile category dropdown
       const categoryMobile = document.querySelector('.product-category-mobile');
       if (categoryMobile) {
         categoryMobile.addEventListener('change', function() {
           selectedCategory = this.value;
-          
+          if (browsingCategory) {
+              browsingCategory.textContent = selectedCategory;
+          }
           // Update checkboxes to match dropdown
           categoryCheckboxes.forEach(checkbox => {
             checkbox.checked = checkbox.value === selectedCategory;
