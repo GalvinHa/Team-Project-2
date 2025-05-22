@@ -3,15 +3,16 @@ About the Site
 
 This is a comprehensive e-commerce platform that allows users to browse products, add them to their shopping cart, add them to their favorites and complete transactions.
 Pages:
-    Home Page: The landing page showcasing featured products and special promotions.
-    Store: Displays a list of available products with filtering options.
-    Product Page: The individual product pages providing detailed descriptions, pricing, and options.
-    Shopping Cart Page: Allows users to view and modify the items they've added to their cart.
-    Checkout Page: Enables users to review their order and enter shipping/payment details.
-    Order Confirmation: Displays a summary of the completed order with an order number.
-    User Account Login/Sign-Up: Authentication system for users to create accounts or log in.
-    FAQ Page: Frequently Asked Questions to assist users.
-    About Page: Information about the site and its mission.
+- **Home Page**: The landing page showcasing featured products and special promotions.
+- **Store**: Displays a list of available products with filtering options.
+- **Product Page**: The individual product pages providing detailed descriptions, pricing, and options.
+- **Shopping Cart Page**: Allows users to view and modify the items they've added to their cart.
+- **Checkout Page**: Enables users to review their order and enter shipping/payment details.
+- **Order Confirmation**: Displays a summary of the completed order with an order number.
+- **User Account Login/Sign-Up**: Authentication system for users to create accounts or log in.
+- **FAQ Page**: Frequently Asked Questions to assist users.
+- **About Page**: Information about the site and its mission.
+
 
 Typography:
 
